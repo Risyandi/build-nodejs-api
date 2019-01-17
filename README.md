@@ -6,4 +6,10 @@ On this the documentations you can find details how to build APIs using (NEM) an
 
 ![NEM](./docs/images/images_nem.png)
 
+References :
+[MongoDB NodeJS Driver](http://mongodb.github.io/node-mongodb-native/)
+[Installing mongoDB](https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-windows/)
+[Mongo Lab](https://mlab.com/)
+[Medium](https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2)
+
 Thanks
