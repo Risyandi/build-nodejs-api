@@ -4,5 +4,5 @@ before I will start to the step by step build APIs using NEM (Node,Express,Mongo
 
 * [installing node.js](./installing-nodejs.md)
 * [installing nodemon](./installing-nodemon.md)
-* installing express framework
+* [installing express framework](./installing-express.md)
 * installing mongoDB
