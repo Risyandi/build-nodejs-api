@@ -3,5 +3,6 @@ at the moments I will present how to build simple APIs using node.js, express an
 before I will start to the step by step build APIs using NEM (Node,Express,MongoDB), you should completed this prequisite.
 
 * installing node.js
+* [installing nodemon](./docs/installing-nodemon.md)
 * installing express framework
 * installing mongoDB

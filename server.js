@@ -27,5 +27,3 @@ require('./app/routes')(app, {});
         console.log('we are live on port :' + port);
     });
 // })
-
-
