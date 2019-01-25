@@ -1,8 +1,8 @@
 // require
 const express = require('express');
-const mongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
-// const db = require('./config/db');
+const db = require('./config/db');
 const app = express();
 
 // listen server
@@ -12,18 +12,36 @@ const port = 8000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // import
-require('./app/routes')(app, {});
+// require('./app/routes')(app, {});
 
-// mongoClient.connect(db.url, (err, database) => {
-//     if (err) return console.log(err)
-    // require('./app/routes')(app, database);
-
+// console.log(db.url, ":url mlab mongodb");
+MongoClient.connect(db.url, (err, database) => {
+    // if error give notify error
+    if (err) {
+        return console.log(err)
+    }
+    
+    
     // make sure your name
-    // https://mlab.com/databases/risyandi-rest-api
     // db = database.db("risyandi-rest-api")    
-    // require('./app/routes')(app, db);
+    require('./app/routes')(app, database);
+
+    // db.collection('notes').insertOne(
+    //     {
+    //         title: 'Hello MongoDB',
+    //         body: 'Hopefully this works!'
+    //     },
+    //     function (err, res) {
+    //         if (err) {
+    //             db.close();
+    //             return console.log(err);
+    //         }
+    //         // Success
+    //         db.close();
+    //     }
+    // )
 
     app.listen(port, () => {
-        console.log('we are live on port :' + port);
+        console.log('Server live on port :' + port);
     });
-// })
+});
