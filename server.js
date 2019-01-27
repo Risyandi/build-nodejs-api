@@ -11,7 +11,7 @@ const port = 8000;
 // URL encoded when you using post method
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// import
+// commented because error: can't set header
 // require('./app/routes')(app, {});
 
 // console.log(db.url, ":url mlab mongodb");
