@@ -1,5 +1,5 @@
 // routes index
-const noteRoutes = require('./note_routes');
+const noteRoutes = require('./routes-notes');
 
 module.exports = function (app, db) {
     noteRoutes(app, db);
