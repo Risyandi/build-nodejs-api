@@ -12,4 +12,4 @@ References :
 [Mongo Lab](https://mlab.com/),
 [Medium](https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2).
 
-Thanks
+Thank you.
