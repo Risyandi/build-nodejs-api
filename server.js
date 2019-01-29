@@ -11,7 +11,7 @@ const port = 8000;
 // URL encoded when you using post method
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// commented because error: can't set header
+// syntax commented because error: can't set header
 // require('./app/routes')(app, {});
 
 // console.log(db.url, ":url mlab mongodb");
@@ -20,26 +20,10 @@ MongoClient.connect(db.url, (err, database) => {
     if (err) {
         return console.log(err)
     }
-    
-    
-    // make sure your name
+
+    // make sure your name database for mongo up 3.1
     // db = database.db("risyandi-rest-api")    
     require('./app/routes')(app, database);
-
-    // db.collection('notes').insertOne(
-    //     {
-    //         title: 'Hello MongoDB',
-    //         body: 'Hopefully this works!'
-    //     },
-    //     function (err, res) {
-    //         if (err) {
-    //             db.close();
-    //             return console.log(err);
-    //         }
-    //         // Success
-    //         db.close();
-    //     }
-    // )
 
     app.listen(port, () => {
         console.log('Server live on port :' + port);
