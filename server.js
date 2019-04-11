@@ -11,7 +11,7 @@ const port = 8000;
 // URL encoded when you using post method
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// syntax commented because error: can't set header
+// syntax commented because [:error] reason is can't set header
 // require('./app/routes')(app, {});
 
 // console.log(db.url, ":url mlab mongodb");
@@ -21,7 +21,7 @@ MongoClient.connect(db.url, (err, database) => {
         return console.log(err)
     }
 
-    // make sure your name database for mongo up 3.1
+    // make sure your name database for mongo version up 3.1
     // db = database.db("risyandi-rest-api")    
     require('./app/routes')(app, database);
 
